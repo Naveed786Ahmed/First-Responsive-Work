@@ -9,7 +9,16 @@ document.getElementById("search").onclick = function () {
     }
     document.getElementById("pass").value = ran;
 
-    if (document.getElementById("number").checked) {
+    if (document.getElementById("str").checked) {
+        let str = "AbCdEfIjKlMnOpQrStUvWxYz";
+        let ran = "";
+        for (let i = 0; i < 10; i++) {
+            let random = Math.floor(Math.random() * str.length);
+            ran += str[random]
+        }
+        document.getElementById("pass").value = ran;
+    }
+    else if (document.getElementById("number").checked) {
         let strs = "AbCdE1234fIjK456lMnOpQr7890StUvWxYz";
         let ran = "";
 
